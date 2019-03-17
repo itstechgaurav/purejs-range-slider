@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hava.css@1.0.2/dist/css/main.min.css">
+</head>
+
+<body class="w-10">
+
+    <div class="row w-10 space-a">
+        <div class="col-5 col-10-md col-11-sm col-12-xs">
+            <div class="main mt-5 card">
+                <div class="card-body">
+                    <h1 class="d-b text-center heading-sec">
+                        Range Slider
+                    </h1>
+                    <p class="text-center mute">
+                        Build with Pure Js
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="heading-ter">
+                Simple
+            </h2>
+            <div class="range-slider mt-2 mb-2" id="r-simple">
+                <div class="range-slider-completed"></div>
+            </div>
+            <h3 class="heading-ter text-center d-b text-info" id="rr-1"></h3>
+            .
+
+
+
+
+            <div class="range-slider range-slider-round range-slider-show-handle" id="slider">
+                <div class="range-slider-completed"></div>
+            </div>
+            <h1 id="vall" align="center">
+                5
+            </h1>
+            <div class="range-slider range-slider-round range-slider-show-handle range-slider-v" id="slider2" style="">
+                <div class="range-slider-completed"></div>
+            </div>
+            <h1 id="vall2" align="center">
+                5
+            </h1>
+
+
+        </div>
+    </div>
+
+
+    <script src="/js/main.js"></script>
+    <script>
+        
+        // Simple
+        
+        new rangeSlider({
+            id: 'r-simple',
+            current: 5,
+            created() {
+                document.getElementById("rr-1").innerText = this.current;
+            },
+            input() {
+                this.created();
+            }
+        });
+        
+        
+        //        let s3 = new rangeSlider({
+        //            id: 'slider',
+        //            min: 0,
+        //            max: 1000,
+        //            current: 1,
+        //            step: 1,
+        //            input: function() {
+        //                document.getElementById("vall").innerHTML = this.current;
+        //            },
+        //            created: function() {
+        //                document.getElementById("vall").innerHTML = this.current;
+        //            },
+        //            changed: function() {
+        //
+        //            }
+        //        });
+                let s4 = new rangeSlider({
+                    id: 'slider2',
+                    min: 10,
+                    max: 30,
+                    current: 30,
+                    step: .5,
+                    input: function() {
+                        document.getElementById("vall2").innerHTML = this.current;
+                    },
+                    created: function() {
+                        document.getElementById("vall2").innerHTML = this.current;
+                    },
+                    changed: function() {
+        
+                    }
+                });
+
+    </script>
+</body>
+
+</html>
