@@ -1,17 +1,18 @@
 {
-    "name": "purejs-range-Slider",
+    "name": "purejs-range-slider",
     "version": "1.0.0",
     "description": "A pure javascript simple and cross browser range slider having responsive and vertical slider features without jquery",
     "main": "index.js",
     "keywords": [
-        "purejs-range-Slider",
-        "range-Slider",
+        "purejs-range-slider",
+        "range-slider",
         "slider-range",
         "simple-range-slider",
         "range-css",
         "range-js",
         "slider-range"
-  ],
+    ],
+    "homepage": "https://github.com/myselfgroot/purejs-range-slider",
     "scripts": {
         "build": "webpack --mode=production",
         "dev": "webpack-dev-server --mode=development"
