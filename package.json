@@ -1,6 +1,6 @@
 {
     "name": "purejs-range-slider",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A pure javascript simple and cross browser range slider having responsive and vertical slider features without jquery",
     "main": "index.js",
     "keywords": [
