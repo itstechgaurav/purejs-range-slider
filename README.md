@@ -1,4 +1,4 @@
-# PureJS Range Slider [Demo](https://epicofjs.com/project/purejs-range-slider-55/full)
+# PureJS Range Slider [Demo](https://myselfgroot.github.io/purejs-range-slider/dist/)
 
 
 #### Features &nbsp;&nbsp;&nbsp; 📺
