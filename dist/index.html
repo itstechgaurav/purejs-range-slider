@@ -4,251 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Pure Js Range Slider</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
     <style>
-         .w-10 {
-              width: 100% !important;
+        section iframe {
+              min-height: 300px;
          }
+        
+        section {
+            margin-bottom: 100px;
+        }
     </style>
-    <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
 <body class="bg-light">
 
-     <div class="container mt-5">
-          <div class="row">
-               <div class="col-sm-12">
-                    <section>
-                         <h4 class="heading  text-dark text-center my-4"> 1 - Super Simple</h4>
-                         <div class="range-slider no-animation" id="rs-demo-1">
-                             <div class="range-slider-completed"></div>
-                         </div>
-                         <div>
-                              <h6 id="rs-1" class="text-muted text-center mt-3"></h6>
-                         </div>
-                         <div class="code-main">
-
-                              <div class="code">
-                                   <pre>
-                                        <code class="html">
-                                             <h3>HTML</h3>
-                                             <p>&lt;div class="range-slider no-animation" id="rs-demo-1"&gt;<br />&nbsp; &nbsp; &nbsp;&lt;div class="range-slider-completed"&gt;&lt;/div&gt;<br /> &lt;/div&gt;<br /> &lt;div&gt;<br />&nbsp; &nbsp; &nbsp;&lt;h6 id="rs-1" class="text-muted text-center mt-3"&gt;&lt;/h6&gt;<br /> &lt;/div&gt;</p>                                        </code>
-                                   </pre>
-                              </div>
-                              <div class="code">
-                                   <pre>
-                                        <code class="javascript">
-                                             <h3>JS</h3>
-                                             <p>&lt;div class="range-slider no-animation" id="rs-demo-1"&gt;<br />&nbsp; &nbsp; &nbsp;&lt;div class="range-slider-completed"&gt;&lt;/div&gt;<br /> &lt;/div&gt;<br /> &lt;div&gt;<br />&nbsp; &nbsp; &nbsp;&lt;h6 id="rs-1" class="text-muted text-center mt-3"&gt;&lt;/h6&gt;<br /> &lt;/div&gt;</p>                                        </code>
-                                   </pre>
-                              </div>
-                         </div>
-                    </section>
-                    <hr>
-                    <section>
-                         <h4 class="heading  text-dark text-center my-4"> 2 - Simple With Handle</h4>
-                         <div class="range-slider range-slider-show-handle no-animation" id="rs-demo-2">
-                             <div class="range-slider-completed"></div>
-                         </div>
-                         <div>
-                              <h6 id="rs-2" class="text-muted text-center mt-3"></h6>
-                         </div>
-                    </section>
-                    <hr>
-                    <section>
-                         <h4 class="heading  text-dark text-center my-4"> 3 - Handle With Round</h4>
-                         <div class="range-slider range-slider-round range-slider-show-handle no-animation" id="rs-demo-3">
-                             <div class="range-slider-completed"></div>
-                         </div>
-                         <div>
-                              <h6 id="rs-3" class="text-muted text-center mt-3"></h6>
-                         </div>
-                    </section>
-                    <hr>
-                    <section>
-                         <h4 class="heading  text-dark text-center my-4"> 4 - Negitive Value</h4>
-                         <div class="range-slider no-animation" id="rs-demo-4">
-                             <div class="range-slider-completed"></div>
-                         </div>
-                         <div>
-                              <h6 id="rs-4" class="text-muted text-center mt-3"></h6>
-                         </div>
-                    </section>
-                    <hr>
-                    <section>
-                         <h4 class="heading  text-dark text-center my-4"> 5 - Vertical Range Slider</h4>
-                         <div class="range-slider range-slider-v no-animation" id="rs-demo-5">
-                             <div class="range-slider-completed"></div>
-                         </div>
-                         <div>
-                              <h6 id="rs-5" class="text-muted text-center mt-3"></h6>
-                         </div>
-                    </section>
-                    <hr>
-                    <section>
-                         <h4 class="heading  text-dark text-center my-4"> 5 - With Steps</h4>
-                         <div class="range-slider no-animation" id="rs-demo-7">
-                             <div class="range-slider-completed"></div>
-                         </div>
-                         <div>
-                              <h6 id="rs-7" class="text-muted text-center mt-3"></h6>
-                         </div>
-                    </section>
-                    <hr>
-                    <section>
-                         <h4 class="heading  text-dark text-center my-4"> 5 - Dynamic Changes</h4>
-                         <div class="range-slider no-animation" id="rs-demo-6">
-                             <div class="range-slider-completed"></div>
-                         </div>
-                         <div>
-                              <h6 id="rs-6" class="text-muted text-center mt-3"></h6>
-                         </div>
-                         <div>
-                              Min: <input type="number" value="0" id="rs-6-min"> <br><br>
-                              Max: <input type="number" value="100" id="rs-6-max"> <br><br>
-                              Value: <input type="number" value="0" id="rs-6-val"> <br><br>
-                              Step: <input type="number" value="1" id="rs-6-step"> <br><br>
-                              <input type="button" value="RUN" id="rs-6-run">
-                         </div>
-                    </section>
-               </div>
-          </div>
-     </div>
-
-
-      <script src="/js/main.js"></script>
-
-      <script type="text/javascript">
-
-          hljs.configure({useBR: true});
-
-          document.addEventListener('DOMContentLoaded', (event) => {
-               document.querySelectorAll('.code-main code').forEach((block) => {
-                    hljs.highlightBlock(block);
-               });
-          });
-
-
-
-           new rangeSlider({
-               id: "rs-demo-1",
-               created() {
-                    document.getElementById("rs-1").innerHTML = this.value
-               },
-               changed() {
-                    this.created();
-               },
-               input() {
-                    this.created();
-               }
-           });
-
-           new rangeSlider({
-               id: "rs-demo-2",
-               created() {
-                    document.getElementById("rs-2").innerHTML = this.value
-               },
-               changed() {
-                    this.created();
-               },
-               input() {
-                    this.created();
-               }
-           });
-
-           new rangeSlider({
-               id: "rs-demo-3",
-               created() {
-                    document.getElementById("rs-3").innerHTML = this.value
-               },
-               changed() {
-                    this.created();
-               },
-               input() {
-                    this.created();
-               }
-           });
-
-           new rangeSlider({
-               id: "rs-demo-4",
-               min: -50,
-               max: 50,
-               created() {
-                    document.getElementById("rs-4").innerHTML = this.value
-               },
-               changed() {
-                    this.created();
-               },
-               input() {
-                    this.created();
-               }
-           });
-
-           new rangeSlider({
-               id: "rs-demo-7",
-               created() {
-                    document.getElementById("rs-7").innerHTML = this.value
-               },
-               changed() {
-                    this.created();
-               },
-               input() {
-                    this.created();
-               }
-           });
-
-
-          new rangeSlider({
-               id: "rs-demo-6",
-               step: 10,
-               created() {
-                    document.getElementById("rs-6").innerHTML = this.value
-               },
-               changed() {
-                    this.created();
-               },
-               input() {
-                    this.created();
-               }
-          });
-
-          let rs6_min = document.getElementById("rs-6-min");
-          let rs6_max = document.getElementById("rs-6-max");
-          let rs6_val = document.getElementById("rs-6-val");
-          let rs6_step = document.getElementById("rs-6-step");
-
-          let run = document.getElementById("rs-6-run");
-          let rs6 = new rangeSlider({
-               id: "rs-demo-6",
-               min: parseInt(rs6_min.value),
-               max: parseInt(rs6_max.value),
-               value: parseInt(rs6_val.value),
-               step: parseInt(rs6_step.value),
-               created() {
-                    document.getElementById("rs-6").innerHTML = this.value;
-                    rs6_min.value = this.min;
-                    rs6_max.value = this.max;
-                    rs6_val.value = this.value;
-                    rs6_step.value = this.step;
-               },
-               changed() {
-                    this.created();
-               },
-               input() {
-                    this.created();
-               }
-          });
-          run.addEventListener("click", function() {
-               rs6.changeOptions(
-                    parseInt(rs6_val.value),
-                    parseInt(rs6_min.value),
-                    parseInt(rs6_max.value),
-                    parseInt(rs6_step.value)
-               )
-          })
-      </script>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <section>
+                    <h4 class="heading  text-dark text-center my-4"> 1 - Super Simple</h4>
+                    <script async src="//jsfiddle.net/MrGroot/e9q48pLx/3/embed/result,js,html,css,resources/"></script>
+                </section>
+                <section>
+                    <h4 class="heading  text-dark text-center my-4"> 2 - Simple With Handle</h4>
+                    <script async src="//jsfiddle.net/MrGroot/hbowpjax/4/embed/result,js,html,css,resources/"></script>
+                </section>
+                <section>
+                    <h4 class="heading  text-dark text-center my-4"> 3 - Handle With Round</h4>
+                    <script async src="//jsfiddle.net/MrGroot/03maxpvk/2/embed/result,js,html,css,resources/"></script>
+                </section>
+                <hr>
+                <section>
+                    <h4 class="heading  text-dark text-center my-4"> 4 - Negitive Value</h4>
+                    <script async src="//jsfiddle.net/MrGroot/mqk8s54w/2/embed/result,js,html,css,resources/"></script>
+                </section>
+                <hr>
+                <section>
+                    <h4 class="heading  text-dark text-center my-4"> 5 - Vertical Range Slider</h4>
+                    <script async src="//jsfiddle.net/MrGroot/t5bc8q1u/3/embed/result,js,html,css,resources/"></script>
+                </section>
+                <hr>
+                <section>
+                    <h4 class="heading  text-dark text-center my-4"> 6 - With Steps</h4>
+                    <script async src="//jsfiddle.net/MrGroot/pjra8dko/embed/result,js,html,css,resources/"></script>
+                </section>
+                <hr>
+                <section>
+                    <h4 class="heading  text-dark text-center my-4"> 7 - Dynamic Changes</h4>
+                    <script async src="//jsfiddle.net/MrGroot/jw7mgsz2/embed/result,js,html,css,resources/"></script>
+                </section>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
