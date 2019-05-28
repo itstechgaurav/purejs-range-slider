@@ -1,0 +1,70 @@
+.range-slider {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(127, 165, 209, 0.349);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    font-size: 2rem;
+    user-select: none;
+}
+
+.range-slider-completed {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    transition: .2s linear;
+}
+
+.range-slider-round {
+    border-radius: 20px;
+}
+
+.range-slider-round > .range-slider-completed {
+    border-radius: inherit;
+}
+
+.range-slider-v {
+    width: 30px;
+    height: 150px;
+}
+
+.range-slider-v > .range-slider-completed {
+    width: 100%;
+    height: 0%;
+    float: right;
+    position: absolute;
+    top: unset;
+}
+
+.range-slider-show-handle > .range-slider-completed {
+    background-color: rgba(30, 143, 255, 0.836);
+}
+
+.range-slider-show-handle > .range-slider-completed::before {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    content: '';
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.range-slider-v.range-slider-show-handle > .range-slider-completed::before {
+    left: 50%;
+    top: 0%;
+}
+
+.no-animation > .range-slider-completed {
+     transition: 0s !important;
+}

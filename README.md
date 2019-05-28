@@ -20,6 +20,38 @@
 
 ![Demo Picture](https://i.imgur.com/y6sAqUQ.png);
 
+
+## Syntax 
+
+```html
+    <div id="demo" class="range-slider">
+        <div class="range-slider-completed"></div>
+    </div>
+
+```
+
+```js
+
+new rangeSlider({
+    id: "demo",  // this is a normal id without input[type='range']
+    min: 0, // optional       |  Default: 0
+    max: 20, // optional      |  Default: 100
+    step: 1, // optional      |  Default: 1
+    current: 0, // optional   |  Default: 0
+    input: function() {   // Optional
+        console.log(this.current);
+    },
+    changed: function() { // Optional
+        console.log(this.current);
+    },
+    created: function() { // Optional
+        console.log(this);
+    }
+});
+
+
+```
+
 ####  Here Is The Browser Supprt
 
 ![Browser Support](https://i.imgur.com/vbpVlZa.jpg)
